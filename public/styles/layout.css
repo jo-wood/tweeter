@@ -40,7 +40,6 @@ main.container {
   padding: 1em 0;
   background-color: #ffffff;
   position: relative;
-  top: 100px;;  
-  z-index: -1;
+  top: 100px; 
 }
 

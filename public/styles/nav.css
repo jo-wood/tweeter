@@ -8,6 +8,7 @@
   height: 80px;
   background-color: #00a087;
   color: #e8fdff;
+  z-index: 10;
 }
 
 #nav-bar .logo {
