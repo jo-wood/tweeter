@@ -1,0 +1,22 @@
+section.new-tweet {
+    width: 400px;
+    background-color: #E8E8E8;
+    float: left;
+    padding: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+  
+  }
+  
+  .counter {
+    float: right;
+  }
+  
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 4em;
+    height: 4em;
+  }
