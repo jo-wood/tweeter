@@ -12,20 +12,15 @@ $(document).ready(function() {
     let $remainingChar = 140 - $textLength  
     console.log($remainingChar);
     
-  
-
     let charCounter = ($(this).siblings(".counter"))
+    
+    // Update counter to include remaining character
     charCounter[0].innerHTML = $remainingChar;
-    // switch (event.originalEvent.data) {
-    //   case typeof event.originalEvent.data === 'number':
-    //     counter++;
-    //     break;
-    //   case null:
-    //     counter--;
-    //     break;
-    // }
-  
-    // console.log(counter);
+    
+    // Change coutner to red when value is negative
+    if ($remainingChar < 0) {
+      charCounter.css("color", "red");
+    }
   
   });
   
