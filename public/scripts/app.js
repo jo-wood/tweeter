@@ -47,6 +47,7 @@ $(document).ready(function () {
     }
   ];
   
+  // Renders article element for each tweet, placed in tweet-container
   function createTweetElement(tweet) {
 
     const { name, handle } = tweet.user;
@@ -74,6 +75,7 @@ $(document).ready(function () {
     return $tweetArticle;
   }
   
+  // Loops through tweet array append to tweets-container
   function renderTweets(tweets) {
     tweets.forEach((entry) => {
       let $tweet = createTweetElement(entry);
@@ -81,6 +83,20 @@ $(document).ready(function () {
     })
   }
 
-  renderTweets(data);
+  // Get Request to retrieve tweet array from DB
+  function loadTweets() {
+    $.ajax({
+      type: 'GET',
+      url: `/tweets`,
+      dataType: 'JSON'
+    })
+    .done( (tweetDB) => {
+      renderTweets(tweetDB);
+    });
+  }
+
+
+  loadTweets();
+
 
 });
