@@ -18,10 +18,11 @@ article.tweet {
 /******** tweet header *********/
 
 .tweet img {
+  border-radius: 10%;
   float: left;
-  height: 60px;
-  margin: 0 10px;
-  width: 60px;
+  height: 10%;
+  margin: 2%;
+  width: 10%;
 }
 
 
@@ -40,12 +41,12 @@ article h3 {
 }
 
 article header a {
-  bottom: 10px;
   color: grey;
+  float: right;
   font-size: 0.6em;
   font-weight: 300;
-  left: 30%;
-  position: relative;
+  margin-right: 5%;
+
 }
 
 /******** tweet content *********/
