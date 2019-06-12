@@ -1,0 +1,58 @@
+
+
+#tweet-container {
+  margin: 2em;
+}
+
+article.tweet {
+  border-radius: 1em;
+  border: 0.5px solid grey;
+}
+
+.tweet img {
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  float: left;
+}
+
+
+.tweet header {
+  background-color: #eee;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  width: 100%;
+  font-weight: 700;
+  margin: 0;
+  float: left;
+}
+
+article h2 {
+  margin-left: 10px;
+}
+
+article a {
+  color: grey;
+  font-weight: 300;
+  font-size: 0.7em;
+  position: relative;
+  left: 30%;
+  bottom: 10px;
+}
+
+
+article .tweet-content {
+  float: left;
+  width: 100%;
+  font-size: 0.75em;
+  border-bottom: 0.5px solid grey;
+  padding: 5%;
+  line-height:2em;
+}
+
+article footer {
+  font-size: 0.5em;
+  color: grey;
+  line-height: 2em;
+  padding-left:5%;
+}
