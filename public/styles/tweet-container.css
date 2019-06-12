@@ -12,7 +12,7 @@ article.tweet {
 .tweet img {
   width: 60px;
   height: 60px;
-  margin-left: 10px;
+  margin: 0 10px;
   float: left;
 }
 
@@ -27,14 +27,14 @@ article.tweet {
   float: left;
 }
 
-article h2 {
-  margin-left: 10px;
+article h3 {
+  margin-top: 10px;
 }
 
-article a {
+article header a {
   color: grey;
   font-weight: 300;
-  font-size: 0.7em;
+  font-size: 0.6em;
   position: relative;
   left: 30%;
   bottom: 10px;
@@ -51,8 +51,16 @@ article .tweet-content {
 }
 
 article footer {
+  clear: both;
   font-size: 0.5em;
   color: grey;
   line-height: 2em;
-  padding-left:5%;
+  padding: 1% 5%;
+  margin: 0;
+}
+
+article i { 
+  font-size: 1.5em;
+  float: right;
+  margin: 0 1%;
 }
