@@ -1,22 +1,29 @@
 section.new-tweet {
-    width: 400px;
-    background-color: #E8E8E8;
-    float: left;
-    padding: 15px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
+  background-color: #E8E8E8;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  float: left;
+  padding: 15px;
+  width: 400px;
+}
+
+.counter {
+  float: right;
+}
+
+.counter.red {
+  color: red;
+}
+
+textarea {
+  height: 4em;
+  max-width: 100%;
+  min-height: 4em;
+  min-width: 100%;
+  width: 100%;
+}
   
-  }
-  
-  .counter {
-    float: right;
-  }
-  
-  textarea {
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
-    min-height: 4em;
-    height: 4em;
-  }
+
+
+ 

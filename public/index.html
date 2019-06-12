@@ -22,7 +22,6 @@
   </head>
 
   <body>
-
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" >
@@ -32,16 +31,35 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
-            <h2>Compose Tweet</h2><hr>
-           
+            <h2>Compose Tweet</h2>
+            <hr>
             <form action="/tweets" method="POST">
               <textarea id="new-tweet-input" name="text" placeholder="What are you humming about?"></textarea><br>
               <input type="submit" value="Tweet">
               <span class="counter">140</span>
             </form>
-          </section>
-          
-      </main>
-    
+        </section>
+        <section id="tweet-container"> 
+          <article class="tweet">
+            <header>
+              <h3>Bill Fields</h3>
+            </header>
+            <main> 
+              <p>Little tweet here</p>
+            </main>
+            <footer>10 Days Ago</footer> 
+          </article>
+          <article class="tweet">
+              <header>
+                <h3>Bill Fields</h3>
+              </header>
+              <main> 
+                <p>Little tweet here</p>
+              </main>
+              <footer>20 Days Ago</footer> 
+            </article>
+        </section> 
+    </main>
+        
   </body>
 </html>

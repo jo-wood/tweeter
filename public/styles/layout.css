@@ -25,7 +25,7 @@ body {
 
 }
 
-main {
+main.container {
   padding-top: 140px;
   padding-bottom: 25px;
   top: 0;
@@ -33,16 +33,53 @@ main {
   background-color: white;
   margin: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
 }
 
-main h2 {
+
+section.tweet-container {
+  
+}
+article.tweet {
+ 
+ 
+}
+
+article.tweet {
+  width: 400px;
+  background-color: #E8E8E8;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  margin: 25px;
+  
+}
+article.tweet * {
   
 }
 
+article.tweet header h3{
+  padding-left: 15px;
+}
 
+article.tweet main {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  height: 3em;
+  background-color: rgb(178, 221, 215);
+ 
+}
+
+article.tweet footer {
+  padding-left: 15px;
+  padding-top: 5px;
+  height: 2em;
+}
 
 
 
