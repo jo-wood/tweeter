@@ -2,22 +2,19 @@
 $(document).ready(function () {
 
   let $tweetForm = $('#new-tweet-form');
-  let $tweetText = $('textarea');
 
   $tweetForm.submit((ev) => {
-
     ev.preventDefault();
-    console.log(ev.currentTarget);
-    
-    $.ajax({
-      method: 'GET',
-      url: "index.html",
+      $.ajax({
+      method: $tweetForm.attr('method'),
+      url: $tweetForm.attr('action'),
       data: $tweetForm.serialize()
     })
-    .done(function(res) {
-      console.log($tweetText[0].value);
+    .done(function() {
+      console.log('tweet was sent');
+
     })
-    .fail(function(xhr, desc, err){
+    .fail(function(xhr){
       console.log('error: ', xhr);      
     })
   });

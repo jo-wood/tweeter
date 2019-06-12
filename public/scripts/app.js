@@ -53,6 +53,33 @@ const tweetData = [{
 
 $(document).ready(function () {
 
+  // function loadTweets(){
+  //   let $tweetForm = $('#new-tweet-form');
+  //   let serializedForm = $tweetForm.serialize();
+  //   // let $tweetText = $('textarea');
+
+  //   $tweetForm.submit((ev) => {
+
+  //     ev.preventDefault();
+
+  //     console.log(ev);
+
+
+  //     $.ajax({
+  //         method: 'GET',
+  //         url: ''
+  //       })
+  //       .done(function (res) {
+  //         console.log(res);
+
+  //         // console.log($tweetText[0].value);
+  //       })
+  //       .fail(function (xhr, desc, err) {
+  //         console.log('error: ', xhr);
+  //       })
+  //   });
+  // }
+
   function renderTweets(tweets) {
     let $tweetSection = $('#tweet-container');
     
