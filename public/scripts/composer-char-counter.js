@@ -2,11 +2,11 @@
 
 
 $(document).ready(function () {
-  let $tweetText = $('textarea');
-  let charCount = 0;
-  let $counter;
-  let adjustedCount;
 
+  let $tweetText = $('textarea'),
+      charCount = 0,
+      $counter,
+      adjustedCount;
   $tweetText.on('keydown', function(ev) {   
     $counter = $(this).siblings('.counter');
     if (ev.key === 'Backspace' || ev.key === 'Delete') {
@@ -21,6 +21,7 @@ $(document).ready(function () {
     }
     return;
   });
+
 });
 
 

@@ -71,10 +71,10 @@ $(document).ready(function () {
         $handle = $('<a>').append(user.handle),
         $h3 = $('<h3>').append(user.name, $handle);
         $header = $('<header>').append($img, $h3),
-        $aHeart = $('<a>').append('<i class="fas fa-heart"></i>'),
-        $aRetweet = $('<a>').append('<i class="fas fa-retweet"></i>'),
-        $aFlag = $('<a>').append('<i class = "fas fa-flag" > </i>'),
-        $footer = $('<footer>').append(tweet.created_at, $aFlag, $aRetweet, $aHeart);
+        $aHeart = $('<a>').attr('href', '#').append('<i class="fas fa-heart"></i>'),
+        $aRetweet = $('<a>').attr('href', '#').append('<i class="fas fa-retweet"></i>'),
+        $aFlag = $('<a>').attr('href', '#').append('<i class = "fas fa-flag" > </i>'),
+        $footer = $('<footer>').append(tweet.created_at, $aHeart, $aRetweet, $aFlag);
     $tweet
     .append(
       $header,
