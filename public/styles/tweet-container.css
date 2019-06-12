@@ -8,6 +8,7 @@ article.tweet {
   border-radius: 1em;
   border: 0.5px solid grey;
   opacity: 0.85;
+  margin: 2% 0;
 }
 
 .tweet img {
