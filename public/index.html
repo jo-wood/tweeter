@@ -14,52 +14,34 @@
     <link rel="stylesheet" href="/styles/new-tweets.css" type="text/css" />
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
+    
   </head>
-
+  
   <body>
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" >
       <span class="header">Tweeter Eater</span>
     </nav>
-
+    
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <section class="new-tweet">
-            <h2>Compose Tweet</h2>
-            <hr>
-            <form action="/tweets" method="POST">
-              <textarea id="new-tweet-input" name="text" placeholder="What are you humming about?"></textarea><br>
-              <input type="submit" value="Tweet">
-              <span class="counter">140</span>
-            </form>
-        </section>
-        <section id="tweet-container"> 
-          <article class="tweet">
-            <header>
-              <h3>Bill Fields</h3>
-            </header>
-            <main> 
-              <p>Little tweet here</p>
-            </main>
-            <footer>10 Days Ago</footer> 
-          </article>
-          <article class="tweet">
-              <header>
-                <h3>Bill Fields</h3>
-              </header>
-              <main> 
-                <p>Little tweet here</p>
-              </main>
-              <footer>20 Days Ago</footer> 
-            </article>
-        </section> 
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <hr>
+        <form action="/tweets" method="POST">
+          <textarea id="new-tweet-input" name="text" placeholder="What are you humming about?"></textarea><br>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+      <section id="tweets-container"> 
+      </section> 
     </main>
-        
+    
   </body>
 </html>
