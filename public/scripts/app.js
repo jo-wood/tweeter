@@ -65,26 +65,20 @@ $(document).ready(function () {
   function createTweetElement(tweet) {
     let user = tweet.user,
         $tweet = $('<article>').addClass('tweet'),
-        $header = $('<header>'),
-        $tweetContent = $('<div>').addClass('tweet-content'),
-        $footer = $('<footer>').append('' + tweet.created_at + ''),
-        $img = $('<img>'),
-        $h3 = $('<h3>'),
-        $handle = $('<a>'),
+        $tweetContent = $('<div>').addClass('tweet-content').append(tweet.content.text),
+        $img = $('<img>').attr('src', user.avatars.small),
+        $handle = $('<a>').append(user.handle),
+        $h3 = $('<h3>').append(user.name, $handle);
+        $header = $('<header>').append($img, $h3),
         $aHeart = $('<a>').append('<i class="fas fa-heart"></i>'),
         $aRetweet = $('<a>').append('<i class="fas fa-retweet"></i>'),
-        $aFlag = $('<a>').append('<i class = "fas fa-flag" > </i>');
-    $tweet.append(
-      $header.append(
-        $img.attr('src', user.avatars.small), 
-        $h3.append('' + user.name + ''),
-        $h3.append(
-          $handle.append(
-            '' + user.handle + '')
-        )
-      ),
-      $tweetContent.append('' + tweet.content.text + ''),
-      $footer.append($aFlag, $aRetweet, $aHeart)
+        $aFlag = $('<a>').append('<i class = "fas fa-flag" > </i>'),
+        $footer = $('<footer>').append(tweet.created_at, $aFlag, $aRetweet, $aHeart);
+    $tweet
+    .append(
+      $header,
+      $tweetContent,
+      $footer
     )
     return $tweet;
   }
