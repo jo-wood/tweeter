@@ -1,32 +1,38 @@
 
 
+/******** section with stacked tweets *********/
+  
+  /** global tweet styles **/
+
 #tweet-container {
   margin: 2em;
 }
 
 article.tweet {
-  border-radius: 1em;
   border: 0.5px solid grey;
-  opacity: 0.85;
+  border-radius: 1em;
   margin: 2% 0;
+  opacity: 0.85;
 }
 
+/******** tweet header *********/
+
 .tweet img {
-  width: 60px;
+  float: left;
   height: 60px;
   margin: 0 10px;
-  float: left;
+  width: 60px;
 }
 
 
 .tweet header {
   background-color: #eee;
-  border-top-right-radius: 1em;
   border-top-left-radius: 1em;
-  width: 100%;
+  border-top-right-radius: 1em;
+  float: left;
   font-weight: 700;
   margin: 0;
-  float: left;
+  width: 100%;
 }
 
 article h3 {
@@ -34,36 +40,39 @@ article h3 {
 }
 
 article header a {
-  color: grey;
-  font-weight: 300;
-  font-size: 0.6em;
-  position: relative;
-  left: 30%;
   bottom: 10px;
+  color: grey;
+  font-size: 0.6em;
+  font-weight: 300;
+  left: 30%;
+  position: relative;
 }
 
+/******** tweet content *********/
 
 article .tweet-content {
-  float: left;
-  width: 100%;
-  font-size: 0.75em;
   border-bottom: 0.5px solid grey;
-  padding: 5%;
+  float: left;
+  font-size: 0.75em;
   line-height:2em;
+  padding: 5%;
+  width: 100%;
 }
+
+/******** tweet footer *********/
 
 article footer {
   clear: both;
-  font-size: 0.5em;
   color: grey;
+  font-size: 0.5em;
   line-height: 2em;
-  padding: 1% 5%;
   margin: 0;
+  padding: 1% 5%;
 }
 
 article i { 
-  visibility: hidden;
-  font-size: 1.5em;
   float: right;
+  font-size: 1.5em;
   margin: 0 1%;
+  visibility: hidden;
 }

@@ -60,6 +60,7 @@ $(document).ready(function () {
       $tweetElement = createTweetElement(tweetInfo);
       $tweetSection.append($tweetElement);
     }
+    return;
   }
   
   function createTweetElement(tweet) {
