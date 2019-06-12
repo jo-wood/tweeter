@@ -7,6 +7,7 @@
 article.tweet {
   border-radius: 1em;
   border: 0.5px solid grey;
+  opacity: 0.85;
 }
 
 .tweet img {
@@ -60,6 +61,7 @@ article footer {
 }
 
 article i { 
+  visibility: hidden;
   font-size: 1.5em;
   float: right;
   margin: 0 1%;
