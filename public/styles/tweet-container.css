@@ -15,6 +15,11 @@ article.tweet {
   opacity: 0.85;
 }
 
+article.tweet:hover {
+  opacity: 1.0;
+  border-width: medium;
+}
+
 /******** tweet header *********/
 
 .tweet img {
@@ -76,4 +81,8 @@ article i {
   font-size: 1.5em;
   margin: 0 1%;
   visibility: hidden;
+}
+
+article.tweet:hover  i {
+  visibility: visible;
 }
