@@ -6,10 +6,19 @@ function escape(str) {
   return div.innerHTML;
 }
 
-let $errEmpty = $('<p>').addClass('renderError').text('* Why are you tweeting nothing? Add some text!');
-let $errMaxReached = $('<p>').addClass('renderError').text("* You've reached 140 characters - better to be short and sweet");
 
 $(document).ready(function () {
+
+  let $errEmpty = $('<p>').addClass('renderError').text('* Why are you tweeting nothing? Add some text!');
+  let $errMaxReached = $('<p>').addClass('renderError').text("* You've reached 140 characters - better to be short and sweet");
+
+  $('textarea').focus(() => {
+    console.log($('#new-tweet-form').children().length);
+    
+    if ($('#new-tweet-form').children().length > 3) {
+      $('.renderError').remove();
+    }
+  });
 
   function loadTweets() {
     $.ajax({
@@ -65,6 +74,7 @@ $(document).ready(function () {
     return $tweet;
   }
 
+
   $('#new-tweet-form').submit((ev) => {
     ev.preventDefault();
     let tweetContent = $('#new-tweet-form').serialize();
@@ -87,8 +97,9 @@ $(document).ready(function () {
         success: (event) => {
           renderTweets([event]);
           $("#new-tweet-form").trigger('reset');
+
           $('.counter').text(140);
-          $('.renderError').remove();
+
         }
       });
     } 
