@@ -6,6 +6,9 @@ function escape(str) {
   return div.innerHTML;
 }
 
+let $errEmpty = $('<p>').addClass('renderError').text('* Why are you tweeting nothing? Add some text!');
+let $errMaxReached = $('<p>').addClass('renderError').text("* You've reached 140 characters - better to be short and sweet");
+
 $(document).ready(function () {
 
   function loadTweets() {
@@ -62,35 +65,36 @@ $(document).ready(function () {
     return $tweet;
   }
 
+  $('#new-tweet-form').submit((ev) => {
+    ev.preventDefault();
+    let tweetContent = $('#new-tweet-form').serialize();
+    console.log(typeof tweetContent.length);
+    
+    let errMessage;
+    // form captures tweet contenet in a string with prefix of 'text=' therefore must be greater than 5
+    // composer-char-counter prevents form submitting string longer than 140
+    if (tweetContent.length === 5) {
+      errMessage = $errEmpty;
+      (ev.target).append(errMessage[0]);
+    } else if (tweetContent.length === 145){
+      errMessage = $errMaxReached;
+      (ev.target).append(errMessage[0]);
+    } else {
+      $.ajax({
+        type: 'POST',
+        url: '/tweets',
+        data: tweetContent,
+        success: (event) => {
+          renderTweets([event]);
+          $("#new-tweet-form").trigger('reset');
+          $('.counter').text(140);
+          $('.renderError').remove();
+        }
+      });
+    } 
+  });
 
-    $('#new-tweet-form').submit((ev) => {
-
-      ev.preventDefault();
-
-      //? TODO fix if content length has no spaces inner text needs to wrap likely needs element tag 
-
-      let tweetContent = $('#new-tweet-form').serialize();
-      let $counter = $('.counter').val();
-      console.log(tweetContent)
-      
-      // form captures tweet contenet in a string with prefix of 'text=' therefore must be greater than 5
-      // composer-char-counter prevents form submitting string longer than 140
-      if (tweetContent.length > 5){
-        $.ajax({
-          type: 'POST',
-          url: '/tweets',
-          data: tweetContent,
-          success: (event) => {
-            console.log(event);
-            
-            renderTweets([event]);
-            $("#new-tweet-form").trigger('reset');
-            $('.counter').text(140).css('color', '#244751');
-          }
-        });
-      } else  {
-        return alert('Invalid input for Tweet');
-      }
-    });
+  //? TODO fix if content length has no spaces inner text needs to wrap likely needs element tag 
 
 });
+

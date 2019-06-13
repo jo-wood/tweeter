@@ -26,6 +26,11 @@ body {
 .robo-bold {font-weight: 700;}
 .robo-bold-italic {font-weight: 700i;}
 
+.renderError {
+  color: red;
+  font-size: 0.7em;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
