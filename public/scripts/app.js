@@ -7,8 +7,6 @@ $(document).ready(function () {
       type: 'GET',
       url: '/tweets',
       success: (res) => {
-        console.log(res);
-        
         renderTweets(res);
       }
     })
@@ -59,37 +57,23 @@ $(document).ready(function () {
 
 
     $('#new-tweet-form').submit((ev) => {
+
       ev.preventDefault();
 
       let tweetContent = $('#new-tweet-form').serialize();
 
-      $.ajax({
+      if (tweetContent){
+        $.ajax({
           type: 'POST',
           url: '/tweets',
           data: tweetContent,
           success: (event) => {
-            renderTweets([event]); 
+            renderTweets([event]);
             $('textarea').val("");
           }
-      })
-        .fail(function (xhr, status, err) {
-          console.log('error status: ', xhr.responseJSON.status);
-          console.log('error message: ', xhr.responseJSON.err);
-        })
+        });
+      }
+      return alert('Invalid input for Tweet');
     });
 
 });
-
-
-
-  // $(document).ajaxSuccess(function( event, xhr, settings ) {
-    
-
-  //   // if (condition) {
-      
-  //   // }
-  //   console.log(settings);
-    
-    
-
-  // });
