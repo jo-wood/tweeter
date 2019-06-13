@@ -2,26 +2,39 @@
 
 $(document).ready(function () {
 
-  function loadDummyTweets(handleTweets) {
+  function loadTweets() {
     $.ajax({
-      method: 'GET',
-      url: './tweets',
-      success: function (res) {
-        console.log(res);        
-        handleTweets(res);
+      type: 'GET',
+      url: '/tweets',
+      success: (res) => {
+        console.log(res);
+        
+        renderTweets(res);
       }
     })
   }
+  loadTweets();
 
   function renderTweets(tweets) {
     let $tweetSection = $('#tweet-container');
+
+    tweets.forEach(tweet => {
+      let newTweet = createTweetElement(tweet);
+      $tweetSection.prepend(newTweet);
+    });
     
-    let $tweetElement;
-    for (let tweetInfo of tweets) {
-      $tweetElement = createTweetElement(tweetInfo);
-      $tweetSection.prepend($tweetElement);
-    }
-    return;
+    // let landingTweets = 3;
+
+    // if (tweets.length === landingTweets){
+    //   for (let tweetInfo of tweets) {
+    //     let dummyTweets = createTweetElement(tweetInfo);
+    //     $tweetSection.prepend(dummyTweets);
+    //   }
+    // } else {
+    //   let $tweetElement = createTweetElement(tweets[4]);
+    //   $tweetSection.prepend($tweetElement);
+    // }
+
   }
 
   function elapsedTime(ms) {
@@ -38,12 +51,11 @@ $(document).ready(function () {
   }
   
   function createTweetElement(tweet) {
-    let user = tweet.user,
-        $tweet = $('<article>').addClass('tweet'),
+    let $tweet = $('<article>').addClass('tweet'),
         $tweetContent = $('<div>').addClass('tweet-content').append(tweet.content.text),
-        $img = $('<img>').attr('src', user.avatars.small),
-        $handle = $('<a>').append(user.handle),
-        $h3 = $('<h3>').append(user.name, $handle);
+        $img = $('<img>').attr('src', tweet.user.avatars.small),
+        $handle = $('<a>').append(tweet.user.handle),
+        $h3 = $('<h3>').append(tweet.user.name, $handle);
         $header = $('<header>').append($img, $h3),
         $aHeart = $('<a>').attr('href', '#').append('<i class="fas fa-heart"></i>'),
         $aRetweet = $('<a>').attr('href', '#').append('<i class="fas fa-retweet"></i>'),
@@ -58,29 +70,36 @@ $(document).ready(function () {
     return $tweet;
   }
 
-  loadDummyTweets(renderTweets);
 
-  let $tweetForm = $('#new-tweet-form');
-  $tweetForm.submit((ev) => {
-    ev.preventDefault();
+    $('#new-tweet-form').submit((ev) => {
+      ev.preventDefault();
 
-    let tweetContent = $tweetForm.serialize();
+      let tweetContent = $('#new-tweet-form').serialize();
 
-    $.ajax({
-        method: $tweetForm.attr('method'),
-        url: $tweetForm.attr('action'),
-        data: tweetContent,
-        success: function(data){
-                  let tweetSubmitted = true;
-                  console.log('tweet was submitted: ', tweetSubmitted);
-          renderTweets(data);
-        }
+      $.ajax({
+          type: 'POST',
+          url: '/tweets',
+          data: tweetContent,
+          success: (event) => renderTweets([event]) 
       })
-      .fail(function (xhr, status, err) {
-        console.log('error status: ', xhr.responseJSON.status);
-        console.log('error message: ', xhr.responseJSON.err);
-      })
-  });
+        .fail(function (xhr, status, err) {
+          console.log('error status: ', xhr.responseJSON.status);
+          console.log('error message: ', xhr.responseJSON.err);
+        })
+    });
 
 });
 
+
+
+  // $(document).ajaxSuccess(function( event, xhr, settings ) {
+    
+
+  //   // if (condition) {
+      
+  //   // }
+  //   console.log(settings);
+    
+    
+
+  // });
