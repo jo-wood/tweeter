@@ -63,11 +63,12 @@ $(document).ready(function () {
       //? TODO fix if content length has no spaces inner text needs to wrap likely needs element tag 
 
       let tweetContent = $('#new-tweet-form').serialize();
-      let $counter = $('.counter').val().length;
-      console.log($counter);
+      let $counter = $('.counter').val();
+      console.log(tweetContent)
       
-
-      if (tweetContent){
+      // form captures tweet contenet in a string with prefix of 'text=' therefore must be greater than 5
+      // composer-char-counter prevents form submitting string longer than 140
+      if (tweetContent.length > 5){
         $.ajax({
           type: 'POST',
           url: '/tweets',
@@ -78,9 +79,7 @@ $(document).ready(function () {
             console.log($('.counter').text(140).css('color', '#244751'));
           }
         });
-      } else if (tweetContent.length > 146 ) {
-        return alert('Tweets must be 140 characters or less');
-      } else {
+      } else  {
         return alert('Invalid input for Tweet');
       }
     });

@@ -18,7 +18,7 @@ $(document).ready(function () {
       $counter.text(adjustCount);
     } else if (currentLength === max){
       alert('You have reached the maximum number of characters');
-    }
+    } 
     return;
   });
 
