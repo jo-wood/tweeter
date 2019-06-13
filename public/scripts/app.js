@@ -60,7 +60,12 @@ $(document).ready(function () {
 
       ev.preventDefault();
 
+      //? TODO fix if content length has no spaces inner text needs to wrap likely needs element tag 
+
       let tweetContent = $('#new-tweet-form').serialize();
+      let $counter = $('.counter').val().length;
+      console.log($counter);
+      
 
       if (tweetContent){
         $.ajax({
@@ -69,11 +74,15 @@ $(document).ready(function () {
           data: tweetContent,
           success: (event) => {
             renderTweets([event]);
-            $('textarea').val("");
+            $("#new-tweet-form").trigger('reset');
+            console.log($('.counter').text(140).css('color', '#244751'));
           }
         });
+      } else if (tweetContent.length > 146 ) {
+        return alert('Tweets must be 140 characters or less');
+      } else {
+        return alert('Invalid input for Tweet');
       }
-      return alert('Invalid input for Tweet');
     });
 
 });

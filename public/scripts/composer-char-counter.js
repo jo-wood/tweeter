@@ -4,20 +4,20 @@
 $(document).ready(function () {
 
   let $tweetText = $('textarea'),
-      charCount = 0,
-      $counter,
-      adjustedCount;
-  $tweetText.on('keydown', function(ev) {   
-    $counter = $(this).siblings('.counter');
-    if (ev.key === 'Backspace' || ev.key === 'Delete') {
-      charCount--;
-    } else {
-      charCount++;
-    }
-    adjustedCount = 140 - charCount;
-    $counter[0].innerText = adjustedCount;
-    if (adjustedCount <= 10) {
-      $counter.css('color', 'red');
+      $counter;
+  $tweetText.on('input', function() {
+    let max = $(this).attr('maxlength');
+    let currentLength = $(this).val().length;
+    
+    if (currentLength <= max) {
+      let adjustCount = max - currentLength;
+      $counter = $(this).siblings('.counter');
+        if (adjustCount <= 10) {
+          $counter.css('color', 'red');
+        }
+      $counter.text(adjustCount);
+    } else if (currentLength === max){
+      alert('You have reached the maximum number of characters');
     }
     return;
   });
