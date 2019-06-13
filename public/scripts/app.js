@@ -1,5 +1,11 @@
 /* Client-side JS logic goes here */
 
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 $(document).ready(function () {
 
   function loadTweets() {
@@ -15,6 +21,7 @@ $(document).ready(function () {
 
   function renderTweets(tweets) {
     let $tweetSection = $('#tweet-container');
+    
 
     tweets.forEach(tweet => {
       let newTweet = createTweetElement(tweet);
@@ -37,7 +44,7 @@ $(document).ready(function () {
   
   function createTweetElement(tweet) {
     let $tweet = $('<article>').addClass('tweet'),
-        $tweetContent = $('<div>').addClass('tweet-content').append(tweet.content.text),
+        $tweetContent = $('<div>').addClass('tweet-content').append(escape(tweet.content.text)),
         $img = $('<img>').attr('src', tweet.user.avatars.small),
         $handle = $('<a>').append(tweet.user.handle),
         $h3 = $('<h3>').append(tweet.user.name, $handle);
@@ -45,8 +52,8 @@ $(document).ready(function () {
         $aHeart = $('<a>').attr('href', '#').append('<i class="fas fa-heart"></i>'),
         $aRetweet = $('<a>').attr('href', '#').append('<i class="fas fa-retweet"></i>'),
         $aFlag = $('<a>').attr('href', '#').append('<i class = "fas fa-flag" > </i>'),
-        $footer = $('<footer>').append(elapsedTime(tweet.created_at), $aHeart, $aRetweet, $aFlag);
-    $tweet
+        $footer = $('<footer>').append(elapsedTime(tweet.created_at), $aHeart, $aRetweet, $aFlag); 
+  $tweet
     .append(
       $header,
       $tweetContent,
@@ -74,9 +81,11 @@ $(document).ready(function () {
           url: '/tweets',
           data: tweetContent,
           success: (event) => {
+            console.log(event);
+            
             renderTweets([event]);
             $("#new-tweet-form").trigger('reset');
-            console.log($('.counter').text(140).css('color', '#244751'));
+            $('.counter').text(140).css('color', '#244751');
           }
         });
       } else  {

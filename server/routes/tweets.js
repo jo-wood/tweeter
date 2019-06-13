@@ -36,6 +36,7 @@ module.exports = function(DataHelpers) {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
+        // send back tweet in res for post req to capture this single new Tweet and send through renderTweets()
         res.status(201).send(tweet);
       }
     });
