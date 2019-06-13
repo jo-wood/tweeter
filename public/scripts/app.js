@@ -21,20 +21,7 @@ $(document).ready(function () {
     tweets.forEach(tweet => {
       let newTweet = createTweetElement(tweet);
       $tweetSection.prepend(newTweet);
-    });
-    
-    // let landingTweets = 3;
-
-    // if (tweets.length === landingTweets){
-    //   for (let tweetInfo of tweets) {
-    //     let dummyTweets = createTweetElement(tweetInfo);
-    //     $tweetSection.prepend(dummyTweets);
-    //   }
-    // } else {
-    //   let $tweetElement = createTweetElement(tweets[4]);
-    //   $tweetSection.prepend($tweetElement);
-    // }
-
+    });    
   }
 
   function elapsedTime(ms) {
@@ -80,7 +67,10 @@ $(document).ready(function () {
           type: 'POST',
           url: '/tweets',
           data: tweetContent,
-          success: (event) => renderTweets([event]) 
+          success: (event) => {
+            renderTweets([event]); 
+            $('textarea').val("");
+          }
       })
         .fail(function (xhr, status, err) {
           console.log('error status: ', xhr.responseJSON.status);
