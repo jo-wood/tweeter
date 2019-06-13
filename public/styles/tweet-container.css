@@ -54,6 +54,7 @@ article .tweet-content {
   line-height:2em;
   padding: 5%;
   width: 100%;
+  word-break: break-word;
 }
 /*
  * tweet footer ********

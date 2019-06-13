@@ -36,4 +36,3 @@ $(document).ready(function () {
     } 
   });
 });
-//? TODO fix if content length has no spaces inner text needs to wrap likely needs element tag 
