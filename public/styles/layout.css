@@ -9,42 +9,37 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
 /*
  * Global layout stuff
  */
-
 body {
-  margin: 0;
-  color: #244751;
   background-color: #eee;
+  color: #244751;
+  margin: 0;
 }
-
+.renderError {
+  color: red;
+  font-size: 0.7em;
+}
+/*
+ * Fonts 
+ */
 .robo-font { font-family: 'Roboto',  sans-serif;}
 .robo-light {font-weight: 300;}
 .robo-light-italic {font-weight: 300i;}
 .robo-bold {font-weight: 700;}
 .robo-bold-italic {font-weight: 700i;}
-
-.renderError {
-  color: red;
-  font-size: 0.7em;
-}
-
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
+ * Additional CSS are defined in seperate CSS files
  */
-
 /*
  * Main content
  */
-
 main.container {
-  width: 450px;
+  background-color: #ffffff;
   margin: 2em auto;
   padding: 1em 0;
-  background-color: #ffffff;
   position: relative;
   top: 100px; 
+  width: 450px;
 }
-

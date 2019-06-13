@@ -1,4 +1,3 @@
-
 #nav-bar {
   background-color: #00a087;
   color: #e8fdff;
@@ -10,13 +9,11 @@
   width: 100%;
   z-index: 10;
 }
-
 #nav-bar .logo {
   float: left;
   height: 80px;
   width: 80px;
 }
-
 #nav-bar .header {
   float: left;
   font-size: 2em;
@@ -24,7 +21,6 @@
   position: absolute;
   margin: 0 0 0 10px;
 }
-
 #nav-bar button {
   border-radius: 2%;
   height: 50%;
@@ -33,7 +29,6 @@
   right: 10px;
   top: 25%;
 }
-
 #nav-bar button:hover {
   opacity: 1.0;
 }

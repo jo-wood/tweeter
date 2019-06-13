@@ -1,27 +1,23 @@
-
-
 /******** section with stacked tweets *********/
-  
-  /** global tweet styles **/
-
+/*
+ * global tweet styles 
+ */
 #tweet-container {
   margin: 2em;
 }
-
 article.tweet {
   border: 0.5px solid grey;
   border-radius: 1em;
   margin: 2% 0;
   opacity: 0.85;
 }
-
 article.tweet:hover {
   opacity: 1.0;
   border-width: medium;
 }
-
-/******** tweet header *********/
-
+/*
+ * tweet header ********
+ */
 .tweet img {
   border-radius: 10%;
   float: left;
@@ -29,8 +25,6 @@ article.tweet:hover {
   margin: 2%;
   width: 10%;
 }
-
-
 .tweet header {
   background-color: #eee;
   border-top-left-radius: 1em;
@@ -40,22 +34,19 @@ article.tweet:hover {
   margin: 0;
   width: 100%;
 }
-
 article h3 {
   margin-top: 10px;
 }
-
 article header a {
   color: grey;
   float: right;
   font-size: 0.6em;
   font-weight: 300;
   margin-right: 5%;
-
 }
-
-/******** tweet content *********/
-
+/*
+ * tweet content ********
+ */
 article .tweet-content {
   border-bottom: 0.5px solid grey;
   float: left;
@@ -64,9 +55,9 @@ article .tweet-content {
   padding: 5%;
   width: 100%;
 }
-
-/******** tweet footer *********/
-
+/*
+ * tweet footer ********
+ */
 article footer {
   clear: both;
   color: grey;
@@ -75,14 +66,12 @@ article footer {
   margin: 0;
   padding: 1% 5%;
 }
-
 article i { 
   float: right;
   font-size: 1.5em;
   margin: 0 1%;
   visibility: hidden;
 }
-
 article.tweet:hover  i {
   visibility: visible;
 }

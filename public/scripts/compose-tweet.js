@@ -1,10 +1,6 @@
-
-
-
 $(document).ready(function () {
-
+// hide compose tweet box so 'toggle' renders the slide in only once
   $('.new-tweet').css('display', 'none');
-
   $('#compose').on('click', () => {
     $('.new-tweet').slideToggle({
       duration: 300,
@@ -13,13 +9,14 @@ $(document).ready(function () {
       }
     })
   })
-
-  let $tweetText = $('textarea'),
-      $counter;
+//
+// character counter
+//
+  let $tweetText = $('textarea');
+  let $counter;
   $tweetText.on('input', function() {
     let max = $(this).attr('maxlength');
     let currentLength = $(this).val().length;
-    
     if (currentLength <= max) {
       let adjustCount = max - currentLength;
       $counter = $(this).siblings('.counter');
@@ -29,12 +26,7 @@ $(document).ready(function () {
           $counter.removeClass('red');
         }
       $counter.text(adjustCount);
-    } else if (currentLength === max){
-      alert('You have reached the maximum number of characters');
     } 
     return;
   });
-
 });
-
-
