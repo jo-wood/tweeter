@@ -113,7 +113,9 @@ article.tweet footer {
   height: 2em;
 }
 
-
+article .tweet-content {
+  word-break: break-word;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
