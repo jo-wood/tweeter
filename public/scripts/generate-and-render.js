@@ -16,34 +16,29 @@ function elapsedTime(ms) {
 }
 //
 function renderTweets(tweets) {
-  console.log((tweets));
-  
   let $tweetSection = $('#tweet-container');
   for (let key in tweets) {
     let newTweet = createTweetElement(tweets[key]);
     $tweetSection.prepend(newTweet);
   }
 }
-
-  function createTweetElement(tweet) {    
-    let $tweetContentText = escape(tweet.content.text);
-    console.log($tweetContentText);
-    
-    let $tweet = $('<article>').addClass('tweet'),
-        $tweetContent = $('<div>').addClass('tweet-content').append($tweetContentText),
-        $img = $('<img>').attr('src', tweet.user.avatars.small),
-        $handle = $('<a>').append(tweet.user.handle),
-        $h3 = $('<h3>').append(tweet.user.name, $handle)
-        $header = $('<header>').append($img, $h3),
-        $aHeart = $('<a>').attr('href', '#').append('<i class="fas fa-heart"></i>'),
-        $aRetweet = $('<a>').attr('href', '#').append('<i class="fas fa-retweet"></i>'),
-        $aFlag = $('<a>').attr('href', '#').append('<i class = "fas fa-flag" > </i>'),
-        $footer = $('<footer>').append(elapsedTime(tweet.created_at), $aHeart, $aRetweet, $aFlag);
-    $tweet
-      .append(
-        $header,
-        $tweetContent,
-        $footer
-      )
-    return $tweet;
-  }
+//
+function createTweetElement(tweet) {    
+  let $tweet = $('<article>').addClass('tweet'),
+      $tweetContent = $('<div>').addClass('tweet-content').append(escape(tweet.content.text)),
+      $img = $('<img>').attr('src', tweet.user.avatars.small),
+      $handle = $('<a>').append(tweet.user.handle),
+      $h3 = $('<h3>').append(tweet.user.name, $handle)
+      $header = $('<header>').append($img, $h3),
+      $aHeart = $('<a>').attr('href', '#').append('<i class="fas fa-heart"></i>'),
+      $aRetweet = $('<a>').attr('href', '#').append('<i class="fas fa-retweet"></i>'),
+      $aFlag = $('<a>').attr('href', '#').append('<i class = "fas fa-flag" > </i>'),
+      $footer = $('<footer>').append(elapsedTime(tweet.created_at), $aHeart, $aRetweet, $aFlag);
+  $tweet
+    .append(
+      $header,
+      $tweetContent,
+      $footer
+    )
+  return $tweet;
+}

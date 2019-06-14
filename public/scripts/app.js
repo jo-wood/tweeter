@@ -20,10 +20,8 @@ $(document).ready(function () {
 //
   $('#new-tweet-form').submit((ev) => {
     ev.preventDefault();
-    let tweetContent = $('#tweet-text').val(); //.serialize();
+    let tweetContent = $('#tweet-text').val();
     let noErrors = grabErrorMessage(ev.target, tweetContent.length);
- 
-     
     if (noErrors) {
         $.ajax({
           type: 'POST',
@@ -32,7 +30,6 @@ $(document).ready(function () {
             text: tweetContent
           },
             success: (event) => {
-
             renderTweets([event]);
             $("#new-tweet-form").trigger('reset');
             $('.new-tweet').css('display', 'none');

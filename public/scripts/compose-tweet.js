@@ -18,17 +18,13 @@ $tweetText.on('input', function() {
     let max = $(this).attr('maxlength');
     let currentLength = $(this).val().length;
     let adjustCount = max - currentLength;
-    if (currentLength <= max) {
-      $counter = $(this).siblings('.counter');
-        if (adjustCount <= 10) {
-          $counter.addClass('red');
-        } else {
-          $counter.removeClass('red');
-        }
-      $counter.text(adjustCount);
-    } else if (currentLength >  max) {
-      $counter.addClass('red');
-    }
+    $counter = $(this).siblings('.counter');
+      if (currentLength > 130) {
+        $counter.addClass('red');
+      } else {
+        $counter.removeClass('red');
+      }
+    $counter.text(adjustCount);
     return;
   });
 });
