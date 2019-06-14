@@ -14,20 +14,25 @@ $(document).ready(function () {
       type: 'GET',
       url: '/tweets',
       success: (res) => renderTweets(res)
-    })
+    });
   }
   loadInitialTweets(); 
 //
   $('#new-tweet-form').submit((ev) => {
     ev.preventDefault();
-    let tweetContent = $('#new-tweet-form').serialize();
+    let tweetContent = $('#tweet-text').val(); //.serialize();
     let noErrors = grabErrorMessage(ev.target, tweetContent.length);
-      if (noErrors) {
+ 
+     
+    if (noErrors) {
         $.ajax({
           type: 'POST',
           url: '/tweets',
-          data: tweetContent,
-          success: (event) => {
+          data: {
+            text: tweetContent
+          },
+            success: (event) => {
+
             renderTweets([event]);
             $("#new-tweet-form").trigger('reset');
             $('.new-tweet').css('display', 'none');

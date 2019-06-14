@@ -41,8 +41,7 @@ This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and 
       - *(successful AJAX call and render, not all tweets in feed will reload)*
     - **if the tweet has no input, an error message will advise and the tweet will not send**
     - **if the tweet has too many characters (counter goes to '0 or negative count') an error message will advise and not send**
-      - the input box will visually show where the cutoff is occuring while the counter advices how many characters caused negative count
-  -**Upon refocusing into the textfield of the compose tweet, the error message is removed**
+      - the input box will cutoff any text beyond 140 characters   -**Upon refocusing into the textfield of the compose tweet, the error message is removed**
   - **The counter subtracts correctly during any back-spacing or deleting**
   - **User input is escaped for XXS protection**
   - **The compose tweet reset's upon successful submit of the tweet**

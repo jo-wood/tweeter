@@ -14,11 +14,11 @@ $(document).ready(function () {
 //
   let $tweetText = $('textarea');
   let $counter;
-  $tweetText.on('input', function() {
+$tweetText.on('input', function() {
     let max = $(this).attr('maxlength');
     let currentLength = $(this).val().length;
+    let adjustCount = max - currentLength;
     if (currentLength <= max) {
-      let adjustCount = max - currentLength;
       $counter = $(this).siblings('.counter');
         if (adjustCount <= 10) {
           $counter.addClass('red');
@@ -26,7 +26,9 @@ $(document).ready(function () {
           $counter.removeClass('red');
         }
       $counter.text(adjustCount);
-    } 
+    } else if (currentLength >  max) {
+      $counter.addClass('red');
+    }
     return;
   });
 });
