@@ -9,7 +9,7 @@ This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and 
 ## Explore tinyApp
 
 !['']()
-!['Main Page (logged in)']()
+!['']()
 
 **DEPENDENCIES:**
 
@@ -37,6 +37,8 @@ This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and 
 #### Compose a Tweet:
 
   - Click the 'Compose' button to write a tweet!
+    - **Upon succesful tweet submission, that *ONE* new tweet will refresh into the top of the tweet feed
+      - (successful AJAX call and render, not all tweets in feed will reload)**
     - **if the tweet has no input, an error message will advise and the tweet will not send**
     - **if the tweet has too many characters (counter goes to '0 or negative count') an error message will advise and not send**
       - the input box will visually show where the cutoff is occuring while the counter advices how many characters caused negative count
@@ -60,3 +62,4 @@ This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and 
 
   - Upon hover over a tweet, styles on tweet become more prominent
     - Social Media action icons appear in right corner within hover
+  - If a tweet was entered as one continuous long sequence of 140 characters (no spaces), the tweet will correctly wrap within the tweet box when rendered to feed
