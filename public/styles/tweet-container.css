@@ -6,8 +6,11 @@
   margin: 2em;
 }
 article.tweet {
-  border: 0.5px solid grey;
+  background-color: #7986cb;
+  border: 0.5px solid#BA55D3;
+  color: #1a237e;
   border-radius: 1em;
+  font-size: 1.2em;
   margin: 2% 0;
   opacity: 0.85;
 }
@@ -26,7 +29,7 @@ article.tweet:hover {
   width: 10%;
 }
 .tweet header {
-  background-color: #eee;
+
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   float: left;
@@ -38,7 +41,7 @@ article h3 {
   margin-top: 10px;
 }
 article header a {
-  color: grey;
+  color: #e8eaf6;
   float: right;
   font-size: 0.6em;
   font-weight: 300;
@@ -48,7 +51,8 @@ article header a {
  * tweet content ********
  */
 article .tweet-content {
-  border-bottom: 0.5px solid grey;
+  background-color: #ffffff;
+  border-bottom: 0.5px solid #311b92;
   float: left;
   font-size: 0.75em;
   line-height:2em;
@@ -61,15 +65,17 @@ article .tweet-content {
  */
 article footer {
   clear: both;
-  color: grey;
-  font-size: 0.5em;
+  color: #FFFF00;
+  font-size: 0.6em;
+  font-weight: 700;
   line-height: 2em;
   margin: 0;
   padding: 1% 5%;
 }
 article i { 
+  color: #00FF00;
   float: right;
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin: 0 1%;
   visibility: hidden;
 }

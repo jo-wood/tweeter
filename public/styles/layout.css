@@ -14,12 +14,13 @@ html {
  */
 body {
   background-color: #eee;
-  color: #244751;
+  color: #311b92;
   margin: 0;
 }
 .renderError {
-  color: red;
-  font-size: 0.7em;
+  color: #ffffff;;
+  font-size: 1em;
+  font-weight: 700;
 }
 /*
  * Fonts 

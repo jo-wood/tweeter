@@ -20,9 +20,9 @@ $tweetText.on('input', function() {
     let adjustCount = max - currentLength;
     $counter = $(this).siblings('.counter');
       if (currentLength > 130) {
-        $counter.addClass('red');
+        $counter.addClass('alert');
       } else {
-        $counter.removeClass('red');
+        $counter.removeClass('alert');
       }
     $counter.text(adjustCount);
     return;

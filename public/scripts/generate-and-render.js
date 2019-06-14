@@ -29,7 +29,7 @@ function createTweetElement(tweet) {
       $img = $('<img>').attr('src', tweet.user.avatars.small),
       $handle = $('<a>').append(tweet.user.handle),
       $h3 = $('<h3>').append(tweet.user.name, $handle)
-      $header = $('<header>').append($img, $h3),
+      $header = $('<header>').addClass('c-theme').append($img, $h3),
       $aHeart = $('<a>').attr('href', '#').append('<i class="fas fa-heart"></i>'),
       $aRetweet = $('<a>').attr('href', '#').append('<i class="fas fa-retweet"></i>'),
       $aFlag = $('<a>').attr('href', '#').append('<i class = "fas fa-flag" > </i>'),

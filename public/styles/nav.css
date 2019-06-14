@@ -1,6 +1,6 @@
 #nav-bar {
-  background-color: #00a087;
-  color: #e8fdff;
+  background-color: #1a237e;
+  color: #e8eaf6;
   left: 0;
   height: 80px;
   padding: 0 2em;
@@ -10,9 +10,10 @@
   z-index: 10;
 }
 #nav-bar .logo {
+  color: #FF1493;
   float: left;
-  height: 80px;
-  width: 80px;
+  font-size: 3em;
+  line-height: 1.8;
 }
 #nav-bar .header {
   float: left;
@@ -22,7 +23,10 @@
   margin: 0 0 0 10px;
 }
 #nav-bar button {
-  border-radius: 2%;
+  background-color:#BA55D3;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  color: #ffffff;
   height: 50%;
   position: absolute;
   opacity: 0.7;

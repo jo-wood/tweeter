@@ -1,23 +1,35 @@
 section.new-tweet {
-  background-color: #eee;
+  background-color: #BA55D3;
+  color: #311b92;
   border-radius: 1em;
   border: solid 1px;
   margin: 2em;
   padding: 1em;
 }
 .new-tweet h2 {
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid #e8eaf6;
   font-weight:700;
   margin:0; 
 }
 .new-tweet textarea {
+  border: 1px solid #e8eaf6;
+  border-radius: 4px;
+  color: #311b92;
   margin: 1em 0 0 0;
-  padding:2%;
-  width:100%;
+  padding: 2%;
+  width: 100%;
+}
+.new-tweet input{
+  background-color: #311b92;
+  color: #e8eaf6;
+  padding: 8px;
+  border: 1px solid #e8eaf6;
+  border-radius: 8px;
 }
 .new-tweet .counter {
   float: right;
+  font-weight: 700;
 }
-.red {
-  color: red;
+.alert {
+  color: #00FF00
 }
