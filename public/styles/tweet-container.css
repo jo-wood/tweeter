@@ -86,8 +86,8 @@ article.tweet:hover  i {
 /* ******************************** */
 /* ********  MEDIA QUERY ********** */
 /* ******************************** */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
   #tweet-container {
-    margin: 6% 1%;
+    margin: 0 2%;
   }
 }

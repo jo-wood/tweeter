@@ -39,15 +39,22 @@
 /* ******************************** */
 /* ********  MEDIA QUERY ********** */
 /* ******************************** */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
+  #nav-bar {
+    padding-left: 30%;
+    height: 60px;
+  }
   #nav-bar .logo {
-    font-size: 2.5em;
-    line-height: 2;
+    font-size: 1.8em;
+    line-height: 1.4;
   }
   #nav-bar .header {
-    float: left;
-    font-size: 2em;
-    line-height: 2.5;
-    position: absolute;
-    margin: 0 0 0 10px;
+    font-size: 1.7em;
+    line-height: 1.5;
+    margin: 0;
+  }
+  #nav-bar button {
+    height: 40%;
+    top: 50%;
+  }
 }
