@@ -29,7 +29,8 @@ article.tweet:hover {
   width: 10%;
 }
 .tweet header {
-
+  background-color: #221367;
+  color: #ffffff;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   float: left;
@@ -65,7 +66,7 @@ article .tweet-content {
  */
 article footer {
   clear: both;
-  color: #FFFF00;
+  color: #fae03c;
   font-size: 0.6em;
   font-weight: 700;
   line-height: 2em;
@@ -81,4 +82,12 @@ article i {
 }
 article.tweet:hover  i {
   visibility: visible;
+}
+/* ******************************** */
+/* ********  MEDIA QUERY ********** */
+/* ******************************** */
+@media only screen and (max-width: 400px) {
+  #tweet-container {
+    margin: 6% 1%;
+  }
 }

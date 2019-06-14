@@ -24,7 +24,7 @@
 }
 #nav-bar button {
   background-color:#BA55D3;
-  border: 1px solid #ffffff;
+  border: none;
   border-radius: 8px;
   color: #ffffff;
   height: 50%;
@@ -35,4 +35,19 @@
 }
 #nav-bar button:hover {
   opacity: 1.0;
+}
+/* ******************************** */
+/* ********  MEDIA QUERY ********** */
+/* ******************************** */
+@media only screen and (max-width: 600px) {
+  #nav-bar .logo {
+    font-size: 2.5em;
+    line-height: 2;
+  }
+  #nav-bar .header {
+    float: left;
+    font-size: 2em;
+    line-height: 2.5;
+    position: absolute;
+    margin: 0 0 0 10px;
 }

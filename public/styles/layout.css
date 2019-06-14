@@ -15,6 +15,7 @@ html {
 body {
   background-color: #eee;
   color: #311b92;
+  font-size: 1em;
   margin: 0;
 }
 .renderError {
@@ -38,9 +39,24 @@ body {
  */
 main.container {
   background-color: #ffffff;
-  margin: 2em auto;
-  padding: 1em 0;
-  position: relative;
-  top: 100px; 
-  width: 450px;
+  display: block;
+  float: left;
+  margin: 5%;
+  max-width: 700px;
+  padding: 6%  0;
+  width: 90%;
+}
+/* ******************************** */
+/* ********  MEDIA QUERY ********** */
+/* ******************************** */
+@media only screen and (max-width: 600px){
+  body{
+    font-size: 0.5em;
+  }
+  main.container {
+    margin:10% 1%;
+    max-width: 700px;
+    padding: 10% 0;
+    width: 98%;
+  }
 }

@@ -33,3 +33,26 @@ section.new-tweet {
 .alert {
   color: #00FF00
 }
+.compose-focus {
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+/* ******************************** */
+/* ********  MEDIA QUERY ********** */
+/* ******************************** */
+@media only screen and (max-width: 400px) {
+  section.new-tweet {
+    margin: 1em;
+    padding: 1em;
+  }
+  .new-tweet h2 {
+    border-bottom: 1px solid #e8eaf6;
+    font-size:1.5em;
+  }
+  .new-tweet input {
+    padding: 4px;
+    border-radius: 4px;
+  }
+}
