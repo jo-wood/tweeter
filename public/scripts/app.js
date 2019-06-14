@@ -30,6 +30,7 @@ $(document).ready(function () {
           success: (event) => {
             renderTweets([event]);
             $("#new-tweet-form").trigger('reset');
+            $('.new-tweet').css('display', 'none');
             $('.counter').text(140);
           }
       });
