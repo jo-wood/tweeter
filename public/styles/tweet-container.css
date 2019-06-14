@@ -90,4 +90,26 @@ article.tweet:hover  i {
   #tweet-container {
     margin: 0 2%;
   }
+  article h3 {
+    font-size: 0.8em;
+  }
+  article .tweet-content {
+    line-height: 1.2;
+    padding: 2%;
+  }
+}
+@media only screen and (min-width: 599px) {
+  #tweet-container {
+    font-size: 1.1em;
+    margin: 5%;
+  }
+
+  article h3 {
+    font-size: 1.2em;
+  }
+
+  article .tweet-content {
+    line-height: 1.2;
+    padding: 4% 10%;
+  }
 }

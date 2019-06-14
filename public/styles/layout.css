@@ -15,7 +15,6 @@ html {
 body {
   background-color: #eee;
   color: #311b92;
-  font-size: 1em;
   margin: 0;
 }
 .renderError {
@@ -53,6 +52,18 @@ main.container {
   }
   main.container {
     margin:10% 1%;
+    max-width: 700px;
+    padding: 10% 0;
+    width: 98%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 0.5em;
+  }
+
+  main.container {
+    margin: 10% 1%;
     max-width: 700px;
     padding: 10% 0;
     width: 98%;

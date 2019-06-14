@@ -58,3 +58,20 @@
     top: 50%;
   }
 }
+@media only screen and (min-width: 600px) {
+  #nav-bar {
+    font-size: 1.8em;
+  }
+  #nav-bar .logo {
+    font-size: 2em;
+    line-height: 1.6;
+  }
+  #nav-bar .header {
+    line-height: 1.5;
+    margin: 0;
+  }
+  #nav-bar button {
+    height: 50%;
+    top: 25%;
+  }
+}
