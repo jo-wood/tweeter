@@ -31,6 +31,7 @@ This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and 
 - Primarily a client-side SPA
 - The client-side app communicates with a server via AJAX
 - Tweets are persisted to MongoDB and survive server restart
+- Responsive design layout
 
 ### Features to Try
 

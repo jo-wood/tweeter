@@ -7,12 +7,32 @@ function escape(str) {
   return div.innerHTML;
 }
 function elapsedTime(ms) {
+  console.log(Date(ms));
+  
   let todayMillis = Date.now();
-  let millisDiff = todayMillis - ms;
-  let timeDiff = parseInt(millisDiff / 86400000, 10);
-  //! update this function with precise time later
-  let timeElapsed = (`${timeDiff} days ago`);
-  return timeElapsed;
+  let millisDiff = (todayMillis - ms) / 1000;
+  let sec = parseInt(millisDiff, 10);
+  let timeDiff = '';
+  let mins =  parseInt(sec / 60);
+  let hours =parseInt(sec / 3600);
+  let days = parseInt(hours / 24);
+
+    if (days !== 0){
+      if (days > 365){
+        timeDiff += ' 1+ years ago'
+        return timeDiff;
+      } else {
+        timeDiff += days + ' days ago'
+      }
+    } else if (hours !== 0){
+      timeDiff += hours + ' hours ago'
+    } else if (mins !== 0) {
+      timeDiff += mins + ' mins ago'
+    } else {
+      timeDiff += sec + ' seconds ago'
+    }
+  console.log(days, hours, mins, sec)
+  return timeDiff;
 }
 //
 function renderTweets(tweets) {

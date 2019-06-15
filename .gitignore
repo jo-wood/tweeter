@@ -1,3 +1,6 @@
 node_modules/
 .env
 .DS_Store
+server/lib/in-memory.db.js
+server/util/simulate-delay.js
+server/data-files/initial-tweets.json
