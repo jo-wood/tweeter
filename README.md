@@ -8,8 +8,7 @@ This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and 
 
 ## Explore tinyApp
 
-!['']()
-!['']()
+!['Main Page of Tweets'](https://github.com/jo-wood/tweeter/blob/master/public/imgs/main_page.png)
 
 **DEPENDENCIES:**
 
@@ -51,6 +50,8 @@ This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and 
 
 ###### **Design**
 
+!['Compose a Tweet + Error Message'](https://github.com/jo-wood/tweeter/blob/master/public/imgs/compose_tweet_with_error.png)
+
   - The compose tweet box slides into view upon clicking 'compose'
   - The character count turns red when user has less than 10 characters left
 
@@ -60,6 +61,9 @@ This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and 
 
 ###### **Design**
 
+!['Hover Tweet and Design Emphasis'](https://github.com/jo-wood/tweeter/blob/master/public/imgs/hover_state.png)
+
   - Upon hover over a tweet, styles on tweet become more prominent
     - Social Media action icons appear in right corner within hover
   - If a tweet was entered as one continuous long sequence of 140 characters (no spaces), the tweet will correctly wrap within the tweet box when rendered to feed
+
