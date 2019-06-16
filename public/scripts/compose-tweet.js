@@ -19,7 +19,7 @@ $(document).ready(function () {
     let currentLength = $(this).val().length;
     let adjustCount = max - currentLength;
     $counter = $(this).siblings('.counter');
-      if (currentLength >= 130) {
+      if (currentLength > 130) {
         $counter.addClass('alert');
       } else {
         $counter.removeClass('alert');
