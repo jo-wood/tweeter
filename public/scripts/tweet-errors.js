@@ -1,3 +1,4 @@
+//
 function grabErrorMessage(eventTarget, contentLength, inputString){
   let $errEmpty = $('<p>').addClass('renderError').text('* Why are you tweeting nothing? Add some text!');
   let $errMaxReached = $('<p>').addClass('renderError').text("* You've reached 140 characters - better to be short and sweet");

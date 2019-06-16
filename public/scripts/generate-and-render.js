@@ -1,11 +1,12 @@
 // 
-// helper fns
+//***** helper fns  ******/
 //
 function escape(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
+
 function elapsedTime(ms) {
   let todayMillis = Date.now();
   let millisDiff = (todayMillis - ms) / 1000;
@@ -31,7 +32,7 @@ function elapsedTime(ms) {
     }
   return timeDiff;
 }
-//
+
 function renderTweets(tweets) {
   let $tweetSection = $('#tweet-container');
   for (let key in tweets) {
@@ -39,7 +40,7 @@ function renderTweets(tweets) {
     $tweetSection.prepend(newTweet);
   }
 }
-//
+
 function createTweetElement(tweet) {    
   let $tweet = $('<article>').addClass('tweet'),
       $tweetContent = $('<div>').addClass('tweet-content').append(escape(tweet.content.text)),

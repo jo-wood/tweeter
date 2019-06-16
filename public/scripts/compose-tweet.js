@@ -1,5 +1,6 @@
 $(document).ready(function () {
-// hide compose tweet box so 'toggle' renders the slide in only once
+
+  // hide compose tweet box so 'toggle' renders the slide in only once
   $('.new-tweet').css('display', 'none');
   $('#compose').on('click', () => {
     $('.new-tweet').slideToggle({
@@ -9,12 +10,11 @@ $(document).ready(function () {
       }
     })
   })
-//
-//// character counter
-//
+
+  // character counter
   let $tweetText = $('textarea');
   let $counter;
-$tweetText.on('input', function() {
+  $tweetText.on('input', function() {
     let max = 140;
     let currentLength = $(this).val().length;
     let adjustCount = max - currentLength;
@@ -27,4 +27,5 @@ $tweetText.on('input', function() {
     $counter.text(adjustCount);
     return;
   });
+
 });

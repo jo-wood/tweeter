@@ -1,14 +1,14 @@
 /* Client-side JS logic goes here */
 'use strict';
-//
+
 $(document).ready(function () {
-//
+
   $('textarea').focus(() => {
     if ($('#new-tweet-form').children().length > 3) {
       $('.renderError').remove();
     }
   });
-//
+
   function loadInitialTweets() {
     $.ajax({
       type: 'GET',
@@ -17,7 +17,7 @@ $(document).ready(function () {
     });
   }
   loadInitialTweets(); 
-//
+
   $('#new-tweet-form').submit((ev) => {
     ev.preventDefault();
     let tweetContent = $('#tweet-text').val();
@@ -38,4 +38,5 @@ $(document).ready(function () {
       });
     } 
   });
+
 });
