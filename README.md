@@ -39,12 +39,12 @@ This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and 
   - Click the 'Compose' button to write a tweet!
     - **Upon succesful tweet submission, that *ONE* new tweet will refresh into the top of the tweet feed**
       - *(successful AJAX call and render, not all tweets in feed will reload)*
-    - **if the tweet has no input, an error message will advise and the tweet will not send**
-    - **if the tweet has too many characters (counter goes to '0 or negative count') an error message will advise and not send**
-      - the input box will cutoff any text beyond 140 characters   -**Upon refocusing into the textfield of the compose tweet, the error message is removed**
+    - **if the tweet has no input, or the input is empty, an error message will advise and the tweet will not send**
+    - **if the tweet has too many characters (counter goes below zero into a negative count') an error message will advise and not send**
+    - **Upon refocusing into the textfield of the compose tweet, the error message is removed**
   - **The counter subtracts correctly during any back-spacing or deleting**
   - **User input is escaped for XXS protection**
-  - **The compose tweet reset's upon successful submit of the tweet**
+  - **The compose tweet resets upon successful submit of the tweet**
 
   - If one key is pressed without any keyup, counter will still decrease by relative increment; text may also be copy and pasted in with correct counter result
 
