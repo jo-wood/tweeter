@@ -21,7 +21,7 @@ $(document).ready(function () {
   $('#new-tweet-form').submit((ev) => {
     ev.preventDefault();
     let tweetContent = $('#tweet-text').val();
-    let noErrors = grabErrorMessage(ev.target, tweetContent.length);
+    let noErrors = grabErrorMessage(ev.target, tweetContent.length, tweetContent);
     if (noErrors) {
         $.ajax({
           type: 'POST',
