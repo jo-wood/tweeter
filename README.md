@@ -53,7 +53,7 @@ This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and 
 !['Compose a Tweet + Error Message'](https://github.com/jo-wood/tweeter/blob/master/docs/compose_tweet_with_error.png)
 
   - The compose tweet box slides into view upon clicking 'compose'
-  - The character count turns red when user has less than 10 characters left
+  - The character count turns neon when user has less than 10 characters left
 
 #### Tweets Feed
 
