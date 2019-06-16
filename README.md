@@ -2,15 +2,11 @@
 
 ## Project Description 
 
-#### Goal 
+### Goal 
 
 This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and AJAX on the front-end, and Node, Express and MongoDB on the back-end.
 
-## Explore tinyApp
-
-!['Main Page of Tweets'](https://github.com/jo-wood/tweeter/blob/master/docs/main_page.png)
-
-**DEPENDENCIES:**
+#### DEPENDENCIES:
 
 - body-parser
 - chance
@@ -18,12 +14,16 @@ This is a simplified single-page Twitter clone using HTML, CSS, JS, jQuery, and 
 - mongodb
 - md5
 
-**GETTING STARTED:**
+#### GETTING STARTED:
 
 - Install all dependencies (using the `npm install` command)
 - Run the development web server using the `node server/index.js` command
   - Open the browser on `http://localhost:8080`
     - *note the port set is 8080*
+
+## Explore tinyApp
+
+!['Main Page of Tweets'](https://github.com/jo-wood/tweeter/blob/master/docs/main_page.png)
 
 ### Primary Functionality
 

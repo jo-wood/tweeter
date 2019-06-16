@@ -7,8 +7,6 @@ function escape(str) {
   return div.innerHTML;
 }
 function elapsedTime(ms) {
-  console.log(Date(ms));
-  
   let todayMillis = Date.now();
   let millisDiff = (todayMillis - ms) / 1000;
   let sec = parseInt(millisDiff, 10);
@@ -31,7 +29,6 @@ function elapsedTime(ms) {
     } else {
       timeDiff += sec + ' seconds ago'
     }
-  console.log(days, hours, mins, sec)
   return timeDiff;
 }
 //

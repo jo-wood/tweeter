@@ -15,7 +15,7 @@ $(document).ready(function () {
   let $tweetText = $('textarea');
   let $counter;
 $tweetText.on('input', function() {
-    let max = $(this).attr('maxlength');
+    let max = 140;
     let currentLength = $(this).val().length;
     let adjustCount = max - currentLength;
     $counter = $(this).siblings('.counter');
